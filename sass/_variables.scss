@@ -1,0 +1,33 @@
+  $outterPaddingDesktop: 50px;
+  $outterPaddingMobile: 25px;
+
+  $screenSizeSM: 480px;
+  $screenSizeMD: 690px;
+  $screenSizeLG: 992px;
+  $screenSizeXL: 1030px;
+
+  @mixin screen-xs {
+    @media screen and (max-width: $screenSizeSM) {
+      @content;
+    }
+  }
+  @mixin screen-sm {
+    @media screen and (max-width: $screenSizeMD) {
+      @content;
+    }
+  }
+  @mixin screen-md {
+    @media screen and (min-width: $screenSizeSM + 1) and (max-width: $screenSizeMD) {
+      @content;
+    }
+  }
+  @mixin screen-lg {
+    @media screen and (min-width: $screenSizeMD + 1) and (max-width: $screenSizeXL) {
+      @content;
+    }
+  }
+  @mixin screen-desktop {
+    @media screen and (min-width: $screenSizeXL + 1) {
+      @content;
+    }
+  }

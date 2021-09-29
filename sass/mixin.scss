@@ -1,0 +1,34 @@
+@import "variables";
+
+@mixin btn-main {
+  height: 40px;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  border-style: none;
+  border-radius: 5px;
+  padding: 0 30px;
+}
+@mixin btn-sec {
+  height: 60px;
+  background: #fff;
+  color: #000;
+  border: 3px solid #000;
+  border-radius: 5px;
+  padding: 0 40px;
+}
+
+.btn-more-products {
+  @include btn-main;
+  margin: 50px auto;
+}
+.btn-subscribe {
+  @include btn-main;
+  text-transform: uppercase;
+  @include screen-xs {
+    width: 100%;
+  }
+}
+.btn-apply-filters {
+  @include btn-sec;
+}
